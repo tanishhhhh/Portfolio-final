@@ -2,13 +2,23 @@
 
 import { motion } from "framer-motion";
 import { GravityContainer } from "@/components/effects/GravityContainer";
-import { ExternalLink, Github, Lock, Server, Activity } from "lucide-react";
+import { ExternalLink, Github, Bug, Server, Activity } from "lucide-react";
 
 const projects = [
     {
+        title: "Adaptive Honeypot Framework",
+        description: "Real-time ML pipeline using XGBoost and Scikit-learn to classify honeypot traffic with 99.9% F1-score and 50ms inference latency. Integrated Cowrie SSH/Telnet honeypot with PostgreSQL and React SOC dashboard for live attack visualization and auto-blocking malicious IPs.",
+        tags: ["Python", "Flask", "React", "XGBoost", "Docker"],
+        icon: Bug,
+        links: {
+            github: "https://github.com/tanishhhhh",
+            demo: "#",
+        },
+    },
+    {
         title: "Suricata IDS Home Lab",
-        description: "A multi-node virtual lab for real-time attack analysis. Detected brute-force and malware. Integrated with Wazuh for a centralized SIEM.",
-        tags: ["Suricata", "Wazuh", "IDS/IPS", "Virtualization"],
+        description: "Engineered multi-node virtual lab to simulate and analyze real-time cyber attacks. Deployed Suricata for network intrusion detection integrated with Wazuh agents for centralized SIEM.",
+        tags: ["Suricata", "Wazuh", "SIEM", "IDS/IPS"],
         icon: Activity,
         links: {
             github: "https://github.com/tanishhhhh",
@@ -17,19 +27,9 @@ const projects = [
     },
     {
         title: "Splunk SIEM Dashboard",
-        description: "Interactive dashboard for Apache web server logs. Visualized traffic, requests, and 4xx/5xx errors using custom SPL queries.",
-        tags: ["Splunk", "SPL", "Log Analysis", "Apache"],
+        description: "Developed interactive Splunk dashboard for Apache web server log analysis. Created SPL queries for KPIs including total requests, successful responses, and error rates.",
+        tags: ["Splunk", "SPL", "Log Analysis"],
         icon: Server,
-        links: {
-            github: "https://github.com/tanishhhhh",
-            demo: "#",
-        },
-    },
-    {
-        title: "Keylogger (POC)",
-        description: "Python-based proof-of-concept using pynput to demonstrate vulnerabilities. Features automated email-based data exfiltration.",
-        tags: ["Python", "Malware Analysis", "Ethical Hacking"],
-        icon: Lock,
         links: {
             github: "https://github.com/tanishhhhh",
             demo: "#",

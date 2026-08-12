@@ -5,6 +5,17 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
     {
+        title: "Cybersecurity Engineer Intern",
+        company: "Iraje Software, Mumbai",
+        period: "Feb 2026 – Aug 2026",
+        description: [
+            "Conducted vulnerability assessments and penetration testing (VAPT) on enterprise PAM and EPM solutions.",
+            "Tested API endpoints, session management, and access control mechanisms against OWASP Top 10 vectors.",
+            "Prepared detailed technical reports and executive summaries with CVSS scores and remediation guidance.",
+        ],
+        tech: ["VAPT", "OWASP Top 10", "Burp Suite", "PAM/EPM", "CVSS"],
+    },
+    {
         title: "Cybersecurity Intern",
         company: "InternsElite",
         period: "Internship",

@@ -2,44 +2,49 @@
 
 import { motion } from "framer-motion";
 import { GravityContainer } from "@/components/effects/GravityContainer";
-import { BookOpen, Code, Shield, Terminal } from "lucide-react";
+import { BookOpen, Code, Shield, Terminal, Monitor, Trophy } from "lucide-react";
 
 const education = [
     {
         degree: "M.Sc. Computer Science",
-        school: "Somaiya School of Basic and Applied Sciences",
-        score: "CGPA 9.45",
-        year: "Present",
+        school: "Somaiya School of Basic and Applied Sciences, Mumbai",
+        score: "CGPA 9.4/10",
+        year: "2024 – 2026",
     },
     {
         degree: "B.Sc. (Hons.) Computer Science",
-        school: "Somaiya School of Basic and Applied Sciences",
-        score: "CGPA 8.66",
-        year: "Graduated",
+        school: "Somaiya School of Basic and Applied Sciences, Mumbai",
+        score: "CGPA 8.66/10",
+        year: "2021 – 2024",
     },
 ];
 
 const skills = [
     {
         category: "Languages",
-        items: ["Python", "Java", "C++", "JavaScript"],
+        items: ["Python", "Java", "SQL", "Bash", "PowerShell"],
         icon: Code,
     },
     {
         category: "Security Tools",
-        items: ["Nmap", "Wireshark", "Nessus", "Metasploit", "Burp Suite"],
+        items: ["Burp Suite", "Nmap", "Wireshark", "Nessus", "Metasploit", "Suricata", "OWASP ZAP"],
         icon: Shield,
     },
     {
-        category: "SIEM & Analysis",
-        items: ["Splunk", "Wazuh", "Log Analysis", "Incident Response"],
+        category: "SIEM & Monitoring",
+        items: ["Splunk (SPL)", "Wazuh", "Prometheus", "Grafana", "Alertmanager"],
         icon: Terminal,
     },
     {
-        category: "Core Concepts",
-        items: ["OWASP Top 10", "Linux Administration", "Firewalls", "Networking"],
-        icon: BookOpen,
+        category: "Systems",
+        items: ["Windows Server", "Active Directory", "Linux"],
+        icon: Monitor,
     },
+];
+
+const achievements = [
+    { label: "Top 1% on TryHackMe", icon: Trophy },
+    { label: "Bug Bounty Researcher (HackerOne)", icon: Shield },
 ];
 
 export const About = () => {
@@ -110,6 +115,28 @@ export const About = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Achievements */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mt-16"
+                >
+                    <h3 className="text-xl font-mono font-bold mb-6 text-center flex items-center justify-center gap-2">
+                        <Trophy className="text-yellow-400" /> Achievements
+                    </h3>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        {achievements.map((ach, index) => (
+                            <GravityContainer key={index} floatDuration={5 + index} floatDistance={4}>
+                                <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-yellow-400/50 transition-colors">
+                                    <ach.icon className="w-5 h-5 text-yellow-400" />
+                                    <span className="text-gray-200 font-medium">{ach.label}</span>
+                                </div>
+                            </GravityContainer>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

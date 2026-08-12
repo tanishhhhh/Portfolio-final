@@ -56,9 +56,7 @@ export const Hero = () => {
 
                         <GravityContainer floatDuration={6} floatDistance={5} className="delay-100">
                             <a
-                                href="https://linkedin.com/in/tanish-parab"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="#contact"
                                 className="group px-8 py-3 border border-white/20 bg-white/5 backdrop-blur-sm rounded font-bold text-white hover:bg-white/10 transition-all hover:scale-105 flex items-center gap-2"
                             >
                                 Contact Me <Mail size={18} />

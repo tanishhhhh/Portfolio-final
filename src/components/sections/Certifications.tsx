@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { Award } from "lucide-react";
 
 const certs = [
+    "FortiGate 7.6 Operator (Fortinet)",
     "Google Cybersecurity Certificate (Coursera)",
     "Google Cloud Security Certificate (Coursera)",
-    "TryHackMe - Advent of Cyber Event",
 ];
 
 export const Certifications = () => {
